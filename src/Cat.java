@@ -1,7 +1,4 @@
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
-import java.net.HttpURLConnection;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.awt.FlowLayout;
@@ -34,7 +31,7 @@ public class Cat {
 			ImageIcon image = new ImageIcon(c);
 			JFrame frame = new JFrame();
 			frame.setLayout(new FlowLayout());
-			frame.setSize(800,800);
+			frame.setSize(800, 800);
 
 			JLabel lbl = new JLabel();
 			lbl.setIcon(image);
