@@ -7,14 +7,15 @@ import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.WindowConstants;
 
 public class Cat {
 
-	private final static String CAT_URL = "https://cataas.com/cat/says/";
+	private static final String CAT_URL = "https://cataas.com/cat/says/";
 
 	private String[] randomTexts = { "Hello", "Hi", "Sup bro", "Sheesh", "Yo wazzup", "Carps carps?" };
 
-	public String wordOfTheDay;
+	private String wordOfTheDay;
 
 	public Cat() {
 		this.wordOfTheDay = getRandomText();
@@ -22,6 +23,10 @@ public class Cat {
 
 	private String getRandomText() {
 		return randomTexts[(int) Math.floor(Math.random() * randomTexts.length)];
+	}
+
+	public String getWordOfTheDay() {
+		return this.wordOfTheDay;
 	}
 
 	public String getCatOfTheDay() throws MalformedURLException {
@@ -37,7 +42,7 @@ public class Cat {
 			lbl.setIcon(image);
 			frame.add(lbl);
 			frame.setVisible(true);
-			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+			frame.setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
 
 		} catch (IOException e) {
 			e.printStackTrace();

@@ -15,10 +15,13 @@ public class App {
             System.out.println("Do you want to see the Cat of the day? Type 'enter' or 'Y' if yes. 'N' to continue.");
             answerStr = scanner.nextLine().toLowerCase();
             if (answerStr.equals("y") || answerStr.equals("")) {
-                System.out.println("The cat of the day says '" + cat.wordOfTheDay + "'");
+                System.out.println("The cat of the day says '" + cat.getWordOfTheDay() + "'");
                 cat.getCatOfTheDay();
+                System.out.println("Thank you for using Java Cats! Goodbye!");
                 return;
             }
+
+            
         }
     }
 }
