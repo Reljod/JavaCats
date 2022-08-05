@@ -18,7 +18,6 @@ public class App {
                 System.out.println("The cat of the day says '" + cat.getWordOfTheDay() + "'");
                 cat.getCatOfTheDay();
                 System.out.println("Thank you for using Java Cats! Goodbye!");
-                return;
             }
 
             
